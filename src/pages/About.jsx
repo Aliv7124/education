@@ -4,9 +4,9 @@ export default function About() {
   return (
     <>
       <style>{`
-        /* =========================================================
+        /* =========================================
            ABOUT SECTION
-        ========================================================= */
+        ========================================= */
 
         .about-cyber-section {
           background-color: #0b0f19;
@@ -30,9 +30,7 @@ export default function About() {
           border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* =========================================================
-           AMBIENT GLOW
-        ========================================================= */
+        /* Ambient Glow */
 
         .about-ambient-orb {
           position: absolute;
@@ -54,9 +52,9 @@ export default function About() {
           pointer-events: none;
         }
 
-        /* =========================================================
+        /* =========================================
            BADGE
-        ========================================================= */
+        ========================================= */
 
         .cyber-badge {
           background: rgba(139, 92, 246, 0.12);
@@ -70,9 +68,9 @@ export default function About() {
           letter-spacing: 0.5px;
         }
 
-        /* =========================================================
+        /* =========================================
            GRADIENT TEXT
-        ========================================================= */
+        ========================================= */
 
         .text-gradient-primary {
           background: linear-gradient(
@@ -83,13 +81,11 @@ export default function About() {
 
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-
-          background-clip: text;
         }
 
-        /* =========================================================
-           IMAGE CONTAINER
-        ========================================================= */
+        /* =========================================
+           IMAGE
+        ========================================= */
 
         .about-image-container {
           border-radius: 1.25rem;
@@ -100,8 +96,6 @@ export default function About() {
 
           box-shadow:
             0 20px 40px rgba(0, 0, 0, 0.6);
-
-          position: relative;
         }
 
         .about-image-container img {
@@ -112,36 +106,11 @@ export default function About() {
           height: auto;
 
           object-fit: cover;
-
-          transition: transform 0.5s ease;
         }
 
-        .about-image-container:hover img {
-          transform: scale(1.02);
-        }
-
-        /* =========================================================
-           EXPERIENCE CARD
-        ========================================================= */
-
-        .glass-experience-card {
-          background: rgba(15, 23, 42, 0.88) !important;
-
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-
-          border: 1px solid rgba(139, 92, 246, 0.3) !important;
-
-          box-shadow:
-            0 12px 30px rgba(0, 0, 0, 0.5),
-            0 0 20px rgba(139, 92, 246, 0.2) !important;
-
-          z-index: 2;
-        }
-
-        /* =========================================================
-           FEATURE ICON
-        ========================================================= */
+        /* =========================================
+           FEATURE ICONS
+        ========================================= */
 
         .about-icon-wrapper {
           width: 52px;
@@ -156,6 +125,7 @@ export default function About() {
           color: #a78bfa;
 
           display: flex;
+
           align-items: center;
           justify-content: center;
 
@@ -187,9 +157,9 @@ export default function About() {
             0 6px 16px rgba(139, 92, 246, 0.4);
         }
 
-        /* =========================================================
-           CTA BUTTON
-        ========================================================= */
+        /* =========================================
+           BUTTON
+        ========================================= */
 
         .btn-cyber-primary {
           background: linear-gradient(
@@ -246,10 +216,9 @@ export default function About() {
           transform: translateX(4px);
         }
 
-        /* =========================================================
-           MOBILE ONLY
-           Desktop remains unchanged
-        ========================================================= */
+        /* =========================================
+           MOBILE
+        ========================================= */
 
         @media (max-width: 767.98px) {
 
@@ -262,117 +231,47 @@ export default function About() {
             padding-bottom: 3rem !important;
           }
 
-          /* Image */
-
           .about-image-container {
             border-radius: 1rem;
           }
 
           .about-image-container img {
-            width: 100%;
-            height: 250px;
+            min-height: 260px;
             object-fit: cover;
           }
 
-          /* Experience badge */
-
-          .glass-experience-card {
-            right: 10px !important;
-            bottom: 10px !important;
-
-            margin: 0 !important;
-
-            border-radius: 1rem !important;
-          }
-
-          .glass-experience-card .card-body {
-            padding: 0.7rem 1rem !important;
-          }
-
-          .glass-experience-card h2 {
-            font-size: 1.8rem !important;
-          }
-
-          .glass-experience-card small {
-            font-size: 0.72rem !important;
-          }
-
-          /* Text */
-
           .about-cyber-section h2 {
-            font-size: 2rem !important;
-
-            line-height: 1.2;
+            font-size: 2rem;
+            line-height: 1.15;
           }
 
           .about-cyber-section p {
             font-size: 0.95rem;
-
-            line-height: 1.65 !important;
           }
 
-          /* Features */
+          .about-icon-wrapper {
+            width: 46px;
+            height: 46px;
+          }
 
           .about-feature-item {
             gap: 0.75rem !important;
           }
 
-          .about-icon-wrapper {
-            width: 44px;
-            height: 44px;
-          }
-
-          .about-feature-item h6 {
-            font-size: 0.9rem;
-          }
-
-          .about-feature-item small {
-            font-size: 0.75rem;
-          }
-
-          /* CTA */
-
           .btn-cyber-primary {
             width: 100%;
-
             justify-content: center;
-
-            padding: 0.8rem 1rem;
           }
         }
 
-        /* Very Small Phones */
+        /* =========================================
+           TABLET
+        ========================================= */
 
-        @media (max-width: 380px) {
-
-          .about-image-container img {
-            height: 220px;
-          }
-
-          .glass-experience-card {
-            right: 8px !important;
-            bottom: 8px !important;
-          }
-
-          .glass-experience-card h2 {
-            font-size: 1.5rem !important;
-          }
-
-          .glass-experience-card small {
-            font-size: 0.65rem !important;
-          }
+        @media (min-width: 768px) and (max-width: 991.98px) {
 
           .about-cyber-section h2 {
-            font-size: 1.75rem !important;
-          }
-
-          .about-feature-item {
-            gap: 0.6rem !important;
-          }
-
-          .about-icon-wrapper {
-            width: 40px;
-            height: 40px;
+            font-size: 2.3rem;
           }
         }
       `}</style>
@@ -390,9 +289,9 @@ export default function About() {
         >
           <div className="row align-items-center g-5">
 
-            {/* =====================================================
+            {/* =====================================
                 LEFT IMAGE
-            ===================================================== */}
+            ===================================== */}
 
             <div className="col-lg-6">
 
@@ -400,57 +299,29 @@ export default function About() {
 
                 <div className="about-image-container">
 
-                  {/* SAME IMAGE AS HERO */}
                   <img
-                    src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
-                    alt="Students learning together"
+                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80"
+                    alt="Students in classroom"
                     className="img-fluid w-100"
                   />
 
                 </div>
 
-                {/* =================================================
-                    EXPERIENCE BADGE
-                ================================================= */}
+                {/* 
+                  15+ EXPERIENCE CARD REMOVED
 
-                <div
-                  className="
-                    card
-                    glass-experience-card
-                    border-0
-                    rounded-4
-                    position-absolute
-                    bottom-0
-                    end-0
-                    mb-4
-                    me-3
-                  "
-                >
-                  <div className="card-body text-center px-4 py-3">
-
-                    <h2 className="fw-bold text-gradient-primary mb-0 display-6">
-                      15+
-                    </h2>
-
-                    <small
-                      style={{
-                        color: '#c4b5fd',
-                        fontSize: '0.85rem'
-                      }}
-                    >
-                      Years of Excellence
-                    </small>
-
-                  </div>
-                </div>
+                  The image stays exactly here.
+                  Nothing is placed over the image.
+                */}
 
               </div>
 
             </div>
 
-            {/* =====================================================
+
+            {/* =====================================
                 RIGHT CONTENT
-            ===================================================== */}
+            ===================================== */}
 
             <div className="col-lg-6">
 
@@ -462,6 +333,7 @@ export default function About() {
 
               </span>
 
+
               {/* Heading */}
 
               <h2 className="display-6 fw-bold mb-4 text-white">
@@ -469,10 +341,13 @@ export default function About() {
                 Empowering Students to{' '}
 
                 <span className="text-gradient-primary">
+
                   Achieve More
+
                 </span>
 
               </h2>
+
 
               {/* Paragraph 1 */}
 
@@ -483,11 +358,15 @@ export default function About() {
                   lineHeight: '1.7'
                 }}
               >
-                We are committed to providing quality education
-                that combines academic knowledge, practical skills,
-                and personal development. Our goal is to prepare
-                students for a successful and rewarding future.
+
+                We are committed to providing quality
+                education that combines academic knowledge,
+                practical skills, and personal development.
+                Our goal is to prepare students for a
+                successful and rewarding future.
+
               </p>
+
 
               {/* Paragraph 2 */}
 
@@ -498,15 +377,18 @@ export default function About() {
                   lineHeight: '1.7'
                 }}
               >
+
                 With experienced faculty, modern learning
-                facilities, and industry-focused programs, we
-                create an environment where students can learn,
-                innovate, and grow with confidence.
+                facilities, and industry-focused programs,
+                we create an environment where students can
+                learn, innovate, and grow with confidence.
+
               </p>
 
-              {/* =================================================
+
+              {/* =====================================
                   FEATURES
-              ================================================= */}
+              ===================================== */}
 
               <div className="row g-4 mb-4">
 
@@ -517,10 +399,13 @@ export default function About() {
                   <div className="d-flex align-items-center gap-3 about-feature-item">
 
                     <div className="about-icon-wrapper">
+
                       <i className="bi bi-person-check fs-4"></i>
+
                     </div>
 
                     <div>
+
                       <h6 className="fw-bold mb-1 text-white">
                         Expert Faculty
                       </h6>
@@ -528,11 +413,13 @@ export default function About() {
                       <small style={{ color: '#94a3b8' }}>
                         Experienced educators
                       </small>
+
                     </div>
 
                   </div>
 
                 </div>
+
 
                 {/* Quality Learning */}
 
@@ -541,10 +428,13 @@ export default function About() {
                   <div className="d-flex align-items-center gap-3 about-feature-item">
 
                     <div className="about-icon-wrapper">
+
                       <i className="bi bi-book-half fs-4"></i>
+
                     </div>
 
                     <div>
+
                       <h6 className="fw-bold mb-1 text-white">
                         Quality Learning
                       </h6>
@@ -552,11 +442,13 @@ export default function About() {
                       <small style={{ color: '#94a3b8' }}>
                         Practical education
                       </small>
+
                     </div>
 
                   </div>
 
                 </div>
+
 
                 {/* Modern Facilities */}
 
@@ -565,10 +457,13 @@ export default function About() {
                   <div className="d-flex align-items-center gap-3 about-feature-item">
 
                     <div className="about-icon-wrapper">
+
                       <i className="bi bi-laptop fs-4"></i>
+
                     </div>
 
                     <div>
+
                       <h6 className="fw-bold mb-1 text-white">
                         Modern Facilities
                       </h6>
@@ -576,11 +471,13 @@ export default function About() {
                       <small style={{ color: '#94a3b8' }}>
                         Tech-enabled learning
                       </small>
+
                     </div>
 
                   </div>
 
                 </div>
+
 
                 {/* Proven Results */}
 
@@ -589,10 +486,13 @@ export default function About() {
                   <div className="d-flex align-items-center gap-3 about-feature-item">
 
                     <div className="about-icon-wrapper">
+
                       <i className="bi bi-award fs-4"></i>
+
                     </div>
 
                     <div>
+
                       <h6 className="fw-bold mb-1 text-white">
                         Proven Results
                       </h6>
@@ -600,6 +500,7 @@ export default function About() {
                       <small style={{ color: '#94a3b8' }}>
                         Student success focused
                       </small>
+
                     </div>
 
                   </div>
@@ -608,17 +509,20 @@ export default function About() {
 
               </div>
 
-              {/* =================================================
+
+              {/* =====================================
                   CTA
-              ================================================= */}
+              ===================================== */}
 
               <Link
                 to="/courses"
                 className="btn btn-cyber-primary"
               >
+
                 Discover Our Courses
 
                 <i className="bi bi-arrow-right ms-2"></i>
+
               </Link>
 
             </div>

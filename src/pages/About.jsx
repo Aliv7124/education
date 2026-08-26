@@ -30,7 +30,9 @@ export default function About() {
           border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Ambient Glow */
+        /* =========================================
+           AMBIENT GLOW
+        ========================================= */
 
         .about-ambient-orb {
           position: absolute;
@@ -81,6 +83,8 @@ export default function About() {
 
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+
+          background-clip: text;
         }
 
         /* =========================================
@@ -178,8 +182,8 @@ export default function About() {
 
           padding: 0.75rem 1.75rem;
 
-          transition: all 0.3s
-            cubic-bezier(0.4, 0, 0.2, 1);
+          transition:
+            all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
           display: inline-flex;
 
@@ -231,15 +235,6 @@ export default function About() {
             padding-bottom: 3rem !important;
           }
 
-          .about-image-container {
-            border-radius: 1rem;
-          }
-
-          .about-image-container img {
-            min-height: 260px;
-            object-fit: cover;
-          }
-
           .about-cyber-section h2 {
             font-size: 2rem;
             line-height: 1.15;
@@ -247,6 +242,16 @@ export default function About() {
 
           .about-cyber-section p {
             font-size: 0.95rem;
+          }
+
+          .about-image-container {
+            border-radius: 1rem;
+          }
+
+          .about-image-container img {
+            width: 100%;
+            min-height: 260px;
+            object-fit: cover;
           }
 
           .about-icon-wrapper {
@@ -262,6 +267,21 @@ export default function About() {
             width: 100%;
             justify-content: center;
           }
+
+          /*
+            MOBILE ORDER
+
+            About content first
+            Image second
+          */
+
+          .about-content {
+            order: 1 !important;
+          }
+
+          .about-image {
+            order: 2 !important;
+          }
         }
 
         /* =========================================
@@ -276,10 +296,15 @@ export default function About() {
         }
       `}</style>
 
+      {/* =========================================
+          ABOUT SECTION
+      ========================================= */}
+
       <section
         id="about"
         className="about-cyber-section py-5"
       >
+
         {/* Ambient Glow */}
         <div className="about-ambient-orb"></div>
 
@@ -287,43 +312,17 @@ export default function About() {
           className="container py-5 position-relative"
           style={{ zIndex: 1 }}
         >
+
           <div className="row align-items-center g-5">
 
             {/* =====================================
-                LEFT IMAGE
+                ABOUT CONTENT
+
+                Desktop = RIGHT
+                Mobile = FIRST
             ===================================== */}
 
-            <div className="col-lg-6">
-
-              <div className="position-relative">
-
-                <div className="about-image-container">
-
-                  <img
-                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80"
-                    alt="Students in classroom"
-                    className="img-fluid w-100"
-                  />
-
-                </div>
-
-                {/* 
-                  15+ EXPERIENCE CARD REMOVED
-
-                  The image stays exactly here.
-                  Nothing is placed over the image.
-                */}
-
-              </div>
-
-            </div>
-
-
-            {/* =====================================
-                RIGHT CONTENT
-            ===================================== */}
-
-            <div className="col-lg-6">
+            <div className="col-lg-6 order-1 order-lg-2 about-content">
 
               {/* Badge */}
 
@@ -341,9 +340,7 @@ export default function About() {
                 Empowering Students to{' '}
 
                 <span className="text-gradient-primary">
-
                   Achieve More
-
                 </span>
 
               </h2>
@@ -358,13 +355,10 @@ export default function About() {
                   lineHeight: '1.7'
                 }}
               >
-
-                We are committed to providing quality
-                education that combines academic knowledge,
-                practical skills, and personal development.
-                Our goal is to prepare students for a
-                successful and rewarding future.
-
+                We are committed to providing quality education
+                that combines academic knowledge, practical skills,
+                and personal development. Our goal is to prepare
+                students for a successful and rewarding future.
               </p>
 
 
@@ -377,12 +371,10 @@ export default function About() {
                   lineHeight: '1.7'
                 }}
               >
-
-                With experienced faculty, modern learning
-                facilities, and industry-focused programs,
-                we create an environment where students can
-                learn, innovate, and grow with confidence.
-
+                With experienced faculty, modern learning facilities,
+                and industry-focused programs, we create an environment
+                where students can learn, innovate, and grow with
+                confidence.
               </p>
 
 
@@ -399,9 +391,7 @@ export default function About() {
                   <div className="d-flex align-items-center gap-3 about-feature-item">
 
                     <div className="about-icon-wrapper">
-
                       <i className="bi bi-person-check fs-4"></i>
-
                     </div>
 
                     <div>
@@ -428,9 +418,7 @@ export default function About() {
                   <div className="d-flex align-items-center gap-3 about-feature-item">
 
                     <div className="about-icon-wrapper">
-
                       <i className="bi bi-book-half fs-4"></i>
-
                     </div>
 
                     <div>
@@ -457,9 +445,7 @@ export default function About() {
                   <div className="d-flex align-items-center gap-3 about-feature-item">
 
                     <div className="about-icon-wrapper">
-
                       <i className="bi bi-laptop fs-4"></i>
-
                     </div>
 
                     <div>
@@ -486,9 +472,7 @@ export default function About() {
                   <div className="d-flex align-items-center gap-3 about-feature-item">
 
                     <div className="about-icon-wrapper">
-
                       <i className="bi bi-award fs-4"></i>
-
                     </div>
 
                     <div>
@@ -527,8 +511,32 @@ export default function About() {
 
             </div>
 
+
+            {/* =====================================
+                IMAGE
+
+                Desktop = LEFT
+                Mobile = SECOND
+            ===================================== */}
+
+            <div className="col-lg-6 order-2 order-lg-1 about-image">
+
+              <div className="about-image-container">
+
+                <img
+                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
+                  alt="Students learning together"
+                  className="img-fluid w-100"
+                />
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
       </section>
     </>
   );

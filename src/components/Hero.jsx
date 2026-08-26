@@ -238,24 +238,18 @@ export default function Hero() {
         }
 
         /* =========================================
-           IMAGE WRAPPER
+           IMAGE
         ========================================= */
 
         .hero-img-wrapper {
           position: relative;
-
           width: 100%;
-
           z-index: 1;
-
-          overflow: visible;
         }
 
         .hero-img {
           display: block;
-
           width: 100%;
-
           height: auto;
 
           border: 1px solid rgba(255, 255, 255, 0.15);
@@ -270,64 +264,6 @@ export default function Hero() {
 
         .hero-img-wrapper:hover .hero-img {
           transform: scale(1.01);
-        }
-
-        /* =========================================
-           FLOATING CARD
-        ========================================= */
-
-        .floating-glass-card {
-          position: absolute !important;
-
-          left: 18px !important;
-
-          bottom: 18px !important;
-
-          margin: 0 !important;
-
-          transform: none !important;
-
-          background: rgba(15, 23, 42, 0.94) !important;
-
-          backdrop-filter: blur(16px);
-
-          -webkit-backdrop-filter: blur(16px);
-
-          border: 1px solid rgba(255, 255, 255, 0.15) !important;
-
-          border-radius: 1.25rem !important;
-
-          box-shadow:
-            0 20px 40px rgba(0, 0, 0, 0.5) !important;
-
-          z-index: 5;
-
-          max-width: calc(100% - 36px);
-
-          overflow: hidden;
-        }
-
-        /* =========================================
-           FLOATING ICON
-        ========================================= */
-
-        .floating-icon-box {
-          width: 48px;
-
-          height: 48px;
-
-          min-width: 48px;
-
-          flex-shrink: 0;
-
-          background: linear-gradient(
-            135deg,
-            #6366f1 0%,
-            #4f46e5 100%
-          );
-
-          box-shadow:
-            0 6px 16px rgba(99, 102, 241, 0.4);
         }
 
         /* =========================================
@@ -348,23 +284,6 @@ export default function Hero() {
           .hero-img-wrapper {
             margin-left: 0 !important;
           }
-
-          .floating-glass-card {
-            left: 14px !important;
-            bottom: 14px !important;
-
-            max-width: calc(100% - 28px);
-          }
-
-          .floating-glass-card .card-body {
-            padding: 0.75rem 1rem !important;
-          }
-
-          .floating-icon-box {
-            width: 44px;
-            height: 44px;
-            min-width: 44px;
-          }
         }
 
         /* =========================================
@@ -379,13 +298,6 @@ export default function Hero() {
 
           .hero-img {
             border-radius: 1rem !important;
-          }
-
-          .floating-glass-card {
-            left: 15px !important;
-            bottom: 15px !important;
-
-            max-width: calc(100% - 30px);
           }
         }
 
@@ -404,38 +316,28 @@ export default function Hero() {
             padding-right: 18px !important;
           }
 
-          /* Heading */
-
           .hero-section h1 {
             font-size: 2.1rem !important;
-
             line-height: 1.2 !important;
           }
 
-          /* Description */
-
           .hero-section .lead {
             font-size: 1rem !important;
-
             line-height: 1.7 !important;
           }
 
           /* Buttons */
 
-          .hero-section .hero-buttons {
+          .hero-buttons {
             width: 100%;
-
             display: flex;
-
             flex-direction: column;
-
             gap: 12px !important;
           }
 
           .btn-hero-primary,
           .btn-hero-secondary {
             width: 100%;
-
             padding: 0.8rem 1.5rem;
           }
 
@@ -443,7 +345,6 @@ export default function Hero() {
 
           .stat-card {
             padding: 0.8rem 0.4rem;
-
             border-radius: 0.9rem;
           }
 
@@ -459,66 +360,14 @@ export default function Hero() {
 
           .hero-img-wrapper {
             margin-left: 0 !important;
-
             width: 100%;
           }
 
           .hero-img {
             width: 100%;
-
             height: 280px;
-
             object-fit: cover;
-
             border-radius: 1rem !important;
-          }
-
-          /* Floating card */
-
-          .floating-glass-card {
-            left: 12px !important;
-
-            right: 12px !important;
-
-            bottom: 12px !important;
-
-            width: auto !important;
-
-            max-width: none !important;
-
-            margin: 0 !important;
-
-            transform: none !important;
-
-            border-radius: 14px !important;
-          }
-
-          .floating-glass-card .card-body {
-            padding: 0.65rem 0.8rem !important;
-
-            gap: 0.7rem !important;
-          }
-
-          .floating-icon-box {
-            width: 42px;
-
-            height: 42px;
-
-            min-width: 42px;
-          }
-
-          .floating-icon-box i {
-            font-size: 1rem !important;
-          }
-
-          .floating-glass-card h6 {
-            font-size: 0.85rem !important;
-          }
-
-          .floating-glass-card small {
-            font-size: 0.65rem !important;
-
-            white-space: nowrap;
           }
         }
 
@@ -551,34 +400,6 @@ export default function Hero() {
           .hero-img {
             height: 250px;
           }
-
-          .floating-glass-card {
-            left: 8px !important;
-
-            right: 8px !important;
-
-            bottom: 8px !important;
-          }
-
-          .floating-glass-card .card-body {
-            padding: 0.55rem 0.65rem !important;
-          }
-
-          .floating-icon-box {
-            width: 36px;
-
-            height: 36px;
-
-            min-width: 36px;
-          }
-
-          .floating-glass-card h6 {
-            font-size: 0.78rem !important;
-          }
-
-          .floating-glass-card small {
-            font-size: 0.58rem !important;
-          }
         }
       `}</style>
 
@@ -589,6 +410,7 @@ export default function Hero() {
       <section className="hero-section py-5 position-relative">
 
         {/* Background Glows */}
+
         <div className="glow-orb glow-orb-1"></div>
         <div className="glow-orb glow-orb-2"></div>
 
@@ -675,10 +497,7 @@ export default function Hero() {
 
               <div className="row g-3">
 
-                {/* Students */}
-
                 <div className="col-4">
-
                   <div className="stat-card text-center">
 
                     <h3 className="fw-bold text-gradient-primary mb-1 display-6 fs-3">
@@ -693,13 +512,9 @@ export default function Hero() {
                     </small>
 
                   </div>
-
                 </div>
 
-                {/* Courses */}
-
                 <div className="col-4">
-
                   <div className="stat-card text-center">
 
                     <h3 className="fw-bold text-gradient-primary mb-1 display-6 fs-3">
@@ -714,13 +529,9 @@ export default function Hero() {
                     </small>
 
                   </div>
-
                 </div>
 
-                {/* Success Rate */}
-
                 <div className="col-4">
-
                   <div className="stat-card text-center">
 
                     <h3 className="fw-bold text-gradient-primary mb-1 display-6 fs-3">
@@ -735,7 +546,6 @@ export default function Hero() {
                     </small>
 
                   </div>
-
                 </div>
 
               </div>
@@ -750,47 +560,11 @@ export default function Hero() {
 
               <div className="hero-img-wrapper">
 
-                {/* Main Image */}
-
                 <img
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
-                  alt="Students learning together"
-                  className="img-fluid rounded-4 hero-img"
+                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80"
+                  alt="Students in classroom"
+                  className="img-fluid w-100 hero-img rounded-4"
                 />
-
-                {/* =================================
-                    FLOATING LEARN & GROW CARD
-                ================================= */}
-
-                <div className="card floating-glass-card">
-
-                  <div className="card-body d-flex align-items-center gap-3 px-4 py-3">
-
-                    {/* Icon */}
-
-                    <div className="floating-icon-box text-white rounded-circle d-flex align-items-center justify-content-center">
-
-                      <i className="bi bi-mortarboard-fill fs-4"></i>
-
-                    </div>
-
-                    {/* Text */}
-
-                    <div>
-
-                      <h6 className="fw-bold text-white mb-0">
-                        Learn & Grow
-                      </h6>
-
-                      <small style={{ color: '#94a3b8' }}>
-                        Build your career with us
-                      </small>
-
-                    </div>
-
-                  </div>
-
-                </div>
 
               </div>
 
